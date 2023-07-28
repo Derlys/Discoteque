@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Discoteque.Data;
 using Discoteque.Business.IServices;
 using Discoteque.Business.Services;
-using Discoteque.Data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +22,7 @@ builder.Services.AddDbContext<DiscotequeContext>(
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IArtistsService, ArtistsService>();
 builder.Services.AddScoped<IAlbumService, AlbumService>();
+builder.Services.AddScoped<ISongService, SongService>();
 
 var app = builder.Build();
 PopulateDb(app);

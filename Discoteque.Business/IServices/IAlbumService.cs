@@ -1,10 +1,11 @@
 using Discoteque.Data.Models;
-namespace Discoteque.Data.Services;
+
+namespace Discoteque.Business.IServices;
 
 public interface IAlbumService
 {
     /// <summary>
-    /// Finds all albums in the EF DB
+    /// Finds all albums in the EF DB 
     /// </summary>
     /// <param name="areReferencesLoaded">Returns associated artists per album if true</param>
     /// <returns>A <see cref="List" /> of <see cref="Album"/> </returns>
